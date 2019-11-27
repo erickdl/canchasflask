@@ -30,10 +30,10 @@ from seguridad import autenticacion, identificador
 
 
 
-
-
+from flask_cors import CORS
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"]="mysql://root:root@localhost/canchas"
+CORS(app)
+app.config["SQLALCHEMY_DATABASE_URI"]="mysql://YR0NhabuUn:MkuE1cqfpu@remotemysql.com/YR0NhabuUn"
 # ASI SE ALMACENA LA CONTRASEÑA PARA NUESTRO JWT
 app.config["SECRET_KEY"]="unodostres"
 app.config["JWT_AUTH_URL_RULE"]="/usuario/login"
